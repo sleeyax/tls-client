@@ -56,14 +56,14 @@ var Chrome_117 = ClientProfile{
 						tls.VersionTLS13,
 						tls.VersionTLS12,
 					}},
-					&tls.ALPSExtension{SupportedProtocols: []string{"h2"}},
+					&tls.ApplicationSettingsExtension{SupportedProtocols: []string{"h2"}},
 					&tls.SupportedCurvesExtension{[]tls.CurveID{
 						tls.CurveID(tls.GREASE_PLACEHOLDER),
 						tls.X25519,
 						tls.CurveP256,
 						tls.CurveP384,
 					}},
-					&tls.UtlsExtendedMasterSecretExtension{},
+					&tls.ExtendedMasterSecretExtension{},
 
 					&tls.SessionTicketExtension{},
 					&tls.UtlsCompressCertExtension{[]tls.CertCompressionAlgo{
@@ -496,7 +496,7 @@ var Firefox_117 = ClientProfile{
 				},
 				Extensions: []tls.TLSExtension{
 					&tls.SNIExtension{},
-					&tls.UtlsExtendedMasterSecretExtension{},
+					&tls.ExtendedMasterSecretExtension{},
 					&tls.RenegotiationInfoExtension{Renegotiation: tls.RenegotiateOnceAsClient},
 					&tls.SupportedCurvesExtension{[]tls.CurveID{
 						tls.X25519,
@@ -514,7 +514,7 @@ var Firefox_117 = ClientProfile{
 					&tls.ALPNExtension{AlpnProtocols: []string{"h2", "http/1.1"}},
 					&tls.StatusRequestExtension{},
 					&tls.DelegatedCredentialsExtension{
-						AlgorithmsSignature: []tls.SignatureScheme{
+						SupportedSignatureAlgorithms: []tls.SignatureScheme{
 							tls.ECDSAWithP256AndSHA256,
 							tls.ECDSAWithP384AndSHA384,
 							tls.ECDSAWithP521AndSHA512,

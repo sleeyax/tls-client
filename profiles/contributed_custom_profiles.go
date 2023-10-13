@@ -35,7 +35,7 @@ var ZalandoAndroidMobile = ClientProfile{
 				},
 				Extensions: []tls.TLSExtension{
 					&tls.SNIExtension{},
-					&tls.UtlsExtendedMasterSecretExtension{},
+					&tls.ExtendedMasterSecretExtension{},
 					&tls.RenegotiationInfoExtension{Renegotiation: tls.RenegotiateOnceAsClient},
 					&tls.SupportedCurvesExtension{Curves: []tls.CurveID{
 						tls.X25519,
@@ -127,7 +127,7 @@ var NikeAndroidMobile = ClientProfile{
 				},
 				Extensions: []tls.TLSExtension{
 					&tls.SNIExtension{},
-					&tls.UtlsExtendedMasterSecretExtension{},
+					&tls.ExtendedMasterSecretExtension{},
 					&tls.RenegotiationInfoExtension{Renegotiation: tls.RenegotiateOnceAsClient},
 					&tls.SupportedCurvesExtension{Curves: []tls.CurveID{
 						tls.X25519,
@@ -221,7 +221,7 @@ var MeshAndroid = ClientProfile{
 				Extensions: []tls.TLSExtension{
 					&tls.UtlsGREASEExtension{},
 					&tls.SNIExtension{},
-					&tls.UtlsExtendedMasterSecretExtension{},
+					&tls.ExtendedMasterSecretExtension{},
 					&tls.RenegotiationInfoExtension{Renegotiation: tls.RenegotiateOnceAsClient},
 					&tls.SupportedCurvesExtension{Curves: []tls.CurveID{
 						tls.CurveID(tls.GREASE_PLACEHOLDER),
@@ -261,7 +261,7 @@ var MeshAndroid = ClientProfile{
 					&tls.UtlsCompressCertExtension{Algorithms: []tls.CertCompressionAlgo{
 						tls.CertCompressionBrotli,
 					}},
-					&tls.ALPSExtension{SupportedProtocols: []string{}},
+					&tls.ApplicationSettingsExtension{SupportedProtocols: []string{}},
 					&tls.UtlsGREASEExtension{},
 					&tls.UtlsPaddingExtension{GetPaddingLen: tls.BoringPaddingStyle},
 				},
@@ -322,7 +322,7 @@ var MeshIos2 = ClientProfile{
 				Extensions: []tls.TLSExtension{
 					&tls.UtlsGREASEExtension{},
 					&tls.SNIExtension{},
-					&tls.UtlsExtendedMasterSecretExtension{},
+					&tls.ExtendedMasterSecretExtension{},
 					&tls.RenegotiationInfoExtension{Renegotiation: tls.RenegotiateOnceAsClient},
 					&tls.SupportedCurvesExtension{Curves: []tls.CurveID{
 						tls.CurveID(tls.GREASE_PLACEHOLDER),
@@ -419,7 +419,7 @@ var MeshAndroid2 = ClientProfile{
 				Extensions: []tls.TLSExtension{
 					&tls.RenegotiationInfoExtension{Renegotiation: tls.RenegotiateOnceAsClient},
 					&tls.SNIExtension{},
-					&tls.UtlsExtendedMasterSecretExtension{},
+					&tls.ExtendedMasterSecretExtension{},
 					&tls.SessionTicketExtension{},
 					&tls.SignatureAlgorithmsExtension{SupportedSignatureAlgorithms: []tls.SignatureScheme{
 						tls.ECDSAWithP256AndSHA256,
@@ -495,7 +495,7 @@ var ConfirmedAndroid = ClientProfile{
 				Extensions: []tls.TLSExtension{
 					&tls.RenegotiationInfoExtension{Renegotiation: tls.RenegotiateNever},
 					&tls.SNIExtension{},
-					&tls.UtlsExtendedMasterSecretExtension{},
+					&tls.ExtendedMasterSecretExtension{},
 					&tls.SessionTicketExtension{},
 					&tls.SignatureAlgorithmsExtension{SupportedSignatureAlgorithms: []tls.SignatureScheme{
 						tls.ECDSAWithP256AndSHA256,
@@ -565,7 +565,7 @@ var ConfirmedAndroid2 = ClientProfile{
 				Extensions: []tls.TLSExtension{
 					&tls.RenegotiationInfoExtension{Renegotiation: tls.RenegotiateNever},
 					&tls.SNIExtension{},
-					&tls.UtlsExtendedMasterSecretExtension{},
+					&tls.ExtendedMasterSecretExtension{},
 					&tls.SessionTicketExtension{},
 					&tls.SignatureAlgorithmsExtension{SupportedSignatureAlgorithms: []tls.SignatureScheme{
 						tls.ECDSAWithP256AndSHA256,
@@ -711,7 +711,7 @@ var Okhttp4Android10 = ClientProfile{
 				},
 				Extensions: []tls.TLSExtension{
 					&tls.SNIExtension{},
-					&tls.UtlsExtendedMasterSecretExtension{},
+					&tls.ExtendedMasterSecretExtension{},
 					&tls.RenegotiationInfoExtension{Renegotiation: tls.RenegotiateNever},
 					&tls.SupportedCurvesExtension{Curves: []tls.CurveID{
 						tls.X25519,
@@ -793,7 +793,7 @@ var Okhttp4Android9 = ClientProfile{
 				Extensions: []tls.TLSExtension{
 					&tls.RenegotiationInfoExtension{Renegotiation: tls.RenegotiateNever},
 					&tls.SNIExtension{},
-					&tls.UtlsExtendedMasterSecretExtension{},
+					&tls.ExtendedMasterSecretExtension{},
 					&tls.SessionTicketExtension{},
 					&tls.SignatureAlgorithmsExtension{SupportedSignatureAlgorithms: []tls.SignatureScheme{
 						tls.ECDSAWithP256AndSHA256,
@@ -864,7 +864,7 @@ var Okhttp4Android8 = ClientProfile{
 				Extensions: []tls.TLSExtension{
 					&tls.RenegotiationInfoExtension{Renegotiation: tls.RenegotiateNever},
 					&tls.SNIExtension{},
-					&tls.UtlsExtendedMasterSecretExtension{},
+					&tls.ExtendedMasterSecretExtension{},
 					&tls.SessionTicketExtension{},
 					&tls.SignatureAlgorithmsExtension{SupportedSignatureAlgorithms: []tls.SignatureScheme{
 						tls.ECDSAWithP256AndSHA256,
@@ -933,7 +933,7 @@ var Okhttp4Android7 = ClientProfile{
 				Extensions: []tls.TLSExtension{
 					&tls.RenegotiationInfoExtension{Renegotiation: tls.RenegotiateNever},
 					&tls.SNIExtension{},
-					&tls.UtlsExtendedMasterSecretExtension{},
+					&tls.ExtendedMasterSecretExtension{},
 					&tls.SessionTicketExtension{},
 					&tls.SignatureAlgorithmsExtension{SupportedSignatureAlgorithms: []tls.SignatureScheme{
 						tls.PKCS1WithSHA512,

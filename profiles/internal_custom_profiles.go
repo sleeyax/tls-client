@@ -35,7 +35,7 @@ var ZalandoIosMobile = ClientProfile{
 				Extensions: []tls.TLSExtension{
 					&tls.UtlsGREASEExtension{},
 					&tls.SNIExtension{},
-					&tls.UtlsExtendedMasterSecretExtension{},
+					&tls.ExtendedMasterSecretExtension{},
 					&tls.RenegotiationInfoExtension{Renegotiation: tls.RenegotiateOnceAsClient},
 					&tls.SupportedCurvesExtension{Curves: []tls.CurveID{
 						tls.CurveID(tls.GREASE_PLACEHOLDER),
@@ -136,7 +136,7 @@ var NikeIosMobile = ClientProfile{
 				Extensions: []tls.TLSExtension{
 					&tls.UtlsGREASEExtension{},
 					&tls.SNIExtension{},
-					&tls.UtlsExtendedMasterSecretExtension{},
+					&tls.ExtendedMasterSecretExtension{},
 					&tls.RenegotiationInfoExtension{Renegotiation: tls.RenegotiateOnceAsClient},
 					&tls.SupportedCurvesExtension{Curves: []tls.CurveID{
 						tls.CurveID(tls.GREASE_PLACEHOLDER),
@@ -239,7 +239,7 @@ var CloudflareCustom = ClientProfile{
 					// due to that we do not care about http2 frame settings
 					&tls.ALPNExtension{AlpnProtocols: []string{"http/1.1"}},
 					&tls.GenericExtension{Id: 22}, // encrypt_then_mac
-					&tls.UtlsExtendedMasterSecretExtension{},
+					&tls.ExtendedMasterSecretExtension{},
 					&tls.SignatureAlgorithmsExtension{SupportedSignatureAlgorithms: []tls.SignatureScheme{
 						tls.ECDSAWithP256AndSHA256,
 						tls.ECDSAWithP384AndSHA384,
@@ -326,7 +326,7 @@ var MMSIos = ClientProfile{
 				},
 				Extensions: []tls.TLSExtension{
 					&tls.SNIExtension{},
-					&tls.UtlsExtendedMasterSecretExtension{},
+					&tls.ExtendedMasterSecretExtension{},
 					&tls.RenegotiationInfoExtension{Renegotiation: tls.RenegotiateOnceAsClient},
 					&tls.SupportedCurvesExtension{Curves: []tls.CurveID{
 						tls.CurveID(0x001d),
@@ -416,7 +416,7 @@ var MeshIos = ClientProfile{
 				Extensions: []tls.TLSExtension{
 					&tls.UtlsGREASEExtension{},
 					&tls.SNIExtension{},
-					&tls.UtlsExtendedMasterSecretExtension{},
+					&tls.ExtendedMasterSecretExtension{},
 					&tls.RenegotiationInfoExtension{Renegotiation: tls.RenegotiateOnceAsClient},
 					&tls.SupportedCurvesExtension{Curves: []tls.CurveID{
 						tls.CurveID(tls.GREASE_PLACEHOLDER),
@@ -519,7 +519,7 @@ var ConfirmedIos = ClientProfile{
 				Extensions: []tls.TLSExtension{
 					&tls.UtlsGREASEExtension{},
 					&tls.SNIExtension{},
-					&tls.UtlsExtendedMasterSecretExtension{},
+					&tls.ExtendedMasterSecretExtension{},
 					&tls.RenegotiationInfoExtension{Renegotiation: tls.RenegotiateOnceAsClient},
 					&tls.SupportedCurvesExtension{Curves: []tls.CurveID{
 						tls.CurveID(tls.GREASE_PLACEHOLDER),
