@@ -26,6 +26,10 @@ require (
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
 
+replace github.com/bogdanfinn/utls => github.com/sleeyax/bogdanfinn-utls v0.0.0-20231013161400-13bf419f2253
+
+replace github.com/bogdanfinn/fhttp => github.com/sleeyax/fhttp v0.5.25-0.20231013161804-e818000de78f
+
 // replace github.com/bogdanfinn/utls => ../utls
 
 // replace github.com/bogdanfinn/fhttp => ../fhttp
